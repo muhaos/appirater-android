@@ -9,6 +9,7 @@ These are new features of this fork:
   - added callback for which buttons users press so you can do analytics on what they do
   - added support for timed/untimed major events in case you want to prompt for a rating only after a certain number of days
   - fixed missing language string so lint won't barf
+  - added Romanian and other languages that were missing
   - added to Maven Central so it can be used w/ Android Studio (the original supposedly was in Maven Central but never was)
 
 The class package name remains com.sbstrm.appirater for historical reasons, but the Maven artifact is in the com.keysolutions group because that's what I can upload to.
@@ -19,7 +20,7 @@ Maven Artifact
 This library is in the Maven Central Library hosted by Sonatype.
 In Gradle, you can reference it with this in your dependencies:
 
-    compile group: 'com.keysolutions', name: 'appirater-android', version: '1.4.0.0'
+    compile group: 'com.keysolutions', name: 'appirater-android', version: '1.4.1.0'
 
 And in Maven, you can reference it with this:
 

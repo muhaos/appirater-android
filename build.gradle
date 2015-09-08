@@ -2,14 +2,14 @@ apply plugin: 'signing'
 apply plugin: 'maven'
 
 group = 'com.keysolutions'
-version = '1.4.0.0'
+version = '1.4.1.0'
 
 buildscript {
    repositories {
       mavenCentral()
    }
    dependencies {
-      classpath 'com.android.tools.build:gradle:1.0.+'
+      classpath 'com.android.tools.build:gradle:1.2.+'
    }
 }
 
@@ -17,11 +17,11 @@ apply plugin: 'android-library'
 
 /// Project info
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
     
     defaultConfig {
-        targetSdkVersion 22
+        targetSdkVersion 23
         minSdkVersion 10
         versionCode 10
     }
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compile "com.android.support:support-v4:[22.0,)"
+    compile "com.android.support:support-v4:[23.0,)"
 }
 
 /// add tasks for Maven Central
