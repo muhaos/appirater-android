@@ -37,7 +37,7 @@ public class Appirater {
     private static final String PREF_DATE_FIRST_LAUNCHED = "date_firstlaunch";
     private static final String PREF_APP_VERSION_CODE = "versioncode";
 
-    public static void appLaunched(Context mContext, RatingButtonListener ratingButtonListener) {
+    public static void appLaunched(Context mContext, EnjoyButtonListener enjoyButtonListener, RatingButtonListener ratingButtonListener) {
         boolean testMode = mContext.getResources().getBoolean(R.bool.appirator_test_mode);
         SharedPreferences prefs = mContext.getSharedPreferences(mContext.getPackageName() + ".appirater", 0);
         if (!testMode && (prefs.getBoolean(PREF_DONT_SHOW, false) || prefs.getBoolean(PREF_RATE_CLICKED, false))) {
@@ -47,7 +47,7 @@ public class Appirater {
         SharedPreferences.Editor editor = prefs.edit();
 
         if (testMode) {
-            showRateDialog(mContext, editor, ratingButtonListener);
+            showEnjoyDialog(mContext, editor, enjoyButtonListener, ratingButtonListener);
             return;
         }
 
@@ -95,11 +95,11 @@ public class Appirater {
                 int timedEvents = mContext.getResources().getInteger(R.integer.appirator_timed_events_until_prompt);
                 if ((timedEvents == 0) || (event_count >= timedEvents)) {
                     if (date_reminder_pressed == 0) {
-                        showRateDialog(mContext, editor, ratingButtonListener);
+                        showEnjoyDialog(mContext, editor, enjoyButtonListener, ratingButtonListener);
                     } else {
                         long remindMillisecondsToWait = mContext.getResources().getInteger(R.integer.appirator_days_before_reminding) * 24 * 60 * 60 * 1000L;
                         if (System.currentTimeMillis() >= (remindMillisecondsToWait + date_reminder_pressed)) {
-                            showRateDialog(mContext, editor, ratingButtonListener);
+                            showEnjoyDialog(mContext, editor, enjoyButtonListener, ratingButtonListener);
                         }
                     }
                 }
@@ -108,6 +108,62 @@ public class Appirater {
 
         editor.apply();
     }
+
+    public static void showFeedbackComposer(Context mContext) {
+        Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" +  mContext.getString(R.string.appirator_feedback_email)));
+        intent.putExtra(Intent.EXTRA_SUBJECT, mContext.getString(R.string.appirator_feedback_email_title));
+        intent.putExtra(Intent.EXTRA_TEXT, "");
+        mContext.startActivity(intent);
+    }
+
+    private static void showEnjoyDialog(final Context mContext, final SharedPreferences.Editor editor,
+                                       final EnjoyButtonListener enjoyButtonListener, final RatingButtonListener ratingButtonListener) {
+        String appName = mContext.getString(R.string.appirator_app_title);
+        final Dialog dialog = new Dialog(mContext);
+
+        // no title because we can't control the color...title is now in the layout
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        @SuppressLint("InflateParams")
+        LinearLayout layout = (LinearLayout) LayoutInflater.from(mContext).inflate(R.layout.enjoy_dialog, null);
+
+        TextView tv = (TextView) layout.findViewById(R.id.message);
+        tv.setText(String.format(mContext.getString(R.string.appirator_enjoy_message), appName));
+
+        Button yesButton = (Button) layout.findViewById(R.id.yes);
+        yesButton.setText(mContext.getString(R.string.appirator_button_enjoy_yes));
+        yesButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                dialog.dismiss();
+                showRateDialog(mContext, editor, ratingButtonListener);
+                if (enjoyButtonListener != null) {
+                    enjoyButtonListener.onYes();
+                }
+            }
+        });
+
+        Button noButton = (Button) layout.findViewById(R.id.no);
+        noButton.setText(mContext.getString(R.string.appirator_button_enjoy_no));
+        noButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                if (editor != null) {
+                    editor.putBoolean(PREF_DONT_SHOW, true);
+                    editor.commit();
+                }
+                dialog.dismiss();
+
+                showFeedbackComposer(mContext);
+
+                if (enjoyButtonListener != null) {
+                    enjoyButtonListener.onNo();
+                }
+            }
+        });
+
+        dialog.setContentView(layout);
+        dialog.show();
+    }
+
 
     @SuppressLint("CommitPrefEdits")
     public static void rateApp(Context mContext) {
@@ -219,4 +275,22 @@ public class Appirater {
          */
         public abstract void onDeclined();
     }
+
+
+    /**
+     * Listener for finding out whether a button has been pressed by the user
+     */
+    public static abstract class EnjoyButtonListener {
+        /**
+         * Called if the user clicks on the Yes button to go to Rate us dialog
+         */
+        public abstract void onYes();
+
+        /**
+         * Called if the user clicks on the No button and need to show feedback composer
+         */
+        public abstract void onNo();
+    }
+
+
 }

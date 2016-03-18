@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">%s Oylayın</string>
-    <string name="appirator_rate_title">Oran %s</string>
+    <string name="appirator_feedback_email_title">Geribildirim</string>
+    <string name="appirator_enjoy_message">%s uygulamasını seviyor musunuz?</string>
+    <string name="appirator_contact_us">Bize ulaşın</string>
+    <string name="appirator_button_enjoy_no">Hayır</string>
+    <string name="appirator_button_enjoy_yes">Evet</string>
+    <string name="appirator_rate_title">%s Oylayın</string>
     <string name="appirator_message">Eğer %s uygulamasını beğendiyseniz, oy verip bize destek olmak ister misiniz? Desteğiniz için teşekkürler!</string>
     <string name="appirator_button_rate">Evet, %s oylamak istiyorum</string>
     <string name="appirator_button_rate_later">Daha sonra hatırlat</string>

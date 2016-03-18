@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">%s értékelése</string>
-    <string name="appirator_rate_title">Arány %s</string>
+    <string name="appirator_feedback_email_title">Visszajelzés</string>
+    <string name="appirator_contact_us">Kapcsolatfelvétel</string>
+    <string name="appirator_button_enjoy_no">Nem</string>
+    <string name="appirator_button_enjoy_yes">Igen</string>
+    <string name="appirator_rate_title">%s értékelése</string>
     <string name="appirator_message">Ha tetszik a %s, ne felejtsd el értékelni az App Store-ban! Csak egy perc az egész. Köszönet a támogatásért!</string>
     <string name="appirator_button_rate">%s értékelése</string>
     <string name="appirator_button_rate_later">Emlékeztess később</string>

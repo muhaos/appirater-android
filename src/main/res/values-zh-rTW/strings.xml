@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">给%s评分</string>
-    <string name="appirator_rate_title">率 %s</string>
+    <string name="appirator_feedback_email_title">反馈</string>
+    <string name="appirator_enjoy_message">你喜歡 %s 嗎？</string>
+    <string name="appirator_contact_us">與我們連絡</string>
+    <string name="appirator_button_enjoy_no">否</string>
+    <string name="appirator_button_enjoy_yes">是</string>
+    <string name="appirator_rate_title">给%s评分</string>
     <string name="appirator_message">如果你喜欢使用%s，你介意花一点时间给它评分吗？不会超过一分钟。感谢您的支持！</string>
     <string name="appirator_button_rate">给%s评分</string>
     <string name="appirator_button_rate_later">稍后提醒我</string>

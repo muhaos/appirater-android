@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="rate_title">Evaluați %s</string>
-    <string name="rate_message">Dacă vă place %s, ați dori să lăsați o scurtă recenzie? Vă mulțumim pentru susținere!</string>
-    <string name="rate">Da, hai să evaluez %s</string>
-    <string name="rate_later">Nu știu, poate mai târziu</string>
-    <string name="rate_cancel">Nu vreau, mulțumesc</string>
+    <string name="appirator_feedback_email_title">Feedback</string>
+    <string name="appirator_contact_us">Contactați-ne</string>
+    <string name="appirator_button_enjoy_no">Nu</string>
+    <string name="appirator_button_enjoy_yes">Da</string>
+    <string name="appirator_rate_title">Evaluați %s</string>
+    <string name="appirator_message">Dacă vă place %s, ați dori să lăsați o scurtă recenzie? Vă mulțumim pentru susținere!</string>
+    <string name="appirator_button_rate">Da, hai să evaluez %s</string>
+    <string name="appirator_button_rate_later">Nu știu, poate mai târziu</string>
+    <string name="appirator_button_rate_cancel">Nu vreau, mulțumesc</string>
 </resources>

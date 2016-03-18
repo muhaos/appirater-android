@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">Ohodnotiť %s</string>
-    <string name="appirator_rate_title">Rýchlosť %s</string>
+    <string name="appirator_feedback_email_title">Spätná väzba</string>
+    <string name="appirator_contact_us">Kontaktujte nás</string>
+    <string name="appirator_button_enjoy_no">Nie</string>
+    <string name="appirator_button_enjoy_yes">Áno</string>
+    <string name="appirator_rate_title">Ohodnotiť %s</string>
     <string name="appirator_message">Pokiaľ sa Vám páči aplikácia %s, mohli by ste ju prosím ohodnotiť v App Store? Zaberie to len chvíľu. Vďaka za Vašu podporu!</string>
     <string name="appirator_button_rate">Ohodnotiť %s</string>
     <string name="appirator_button_rate_later">Pripomenúť neskôr</string>

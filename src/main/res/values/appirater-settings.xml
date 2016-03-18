@@ -7,6 +7,11 @@
     <string name="appirator_app_title">Your App Name</string>
     <string name="appirator_rate_title">Rate %s</string>
     <string name="appirator_message">Enjoying %s? If so, please rate us in the Play Store! Thanks!</string>
+    <string name="appirator_button_enjoy_yes">Yes</string>
+    <string name="appirator_button_enjoy_no">No</string>
+    <string name="appirator_enjoy_message">Enjoying %s?</string>
+    <string name="appirator_feedback_email" translatable="false">your@email.here</string>
+    <string name="appirator_feedback_email_title" >Feedback</string>
     <string name="appirator_market_url" translatable="false">market://details?id=%s</string>
     <integer name="appirator_days_until_prompt">30</integer>
     <integer name="appirator_launches_until_prompt">15</integer>

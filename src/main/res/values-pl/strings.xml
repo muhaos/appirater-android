@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">Oceń %s</string>
-    <string name="appirator_rate_title">Tarief %s</string>
+    <string name="appirator_feedback_email_title">Opinie</string>
+    <string name="appirator_enjoy_message">Czy podoba Ci się %s?</string>
+    <string name="appirator_contact_us">Skontaktuj się z nami</string>
+    <string name="appirator_button_enjoy_no">Nie</string>
+    <string name="appirator_button_enjoy_yes">Tak</string>
+    <string name="appirator_rate_title">Oceń %s</string>
     <string name="appirator_message">Jeżeli podoba Ci się korzystanie z %s, może zechciałbyś poświęcić chwilę czasu, aby ocenić aplikację? Nie zajmie Ci to więcej niż minutę. Dziękujemy za pomoc!</string>
     <string name="appirator_button_rate">Oceń %s</string>
     <string name="appirator_button_rate_later">Przypomnij później</string>

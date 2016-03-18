@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">%sの評価</string>
-    <string name="appirator_rate_title">レート %s</string>
+    <string name="appirator_feedback_email_title">ご意見・ご感想</string>
+    <string name="appirator_enjoy_message">%s に夢中ですか？</string>
+    <string name="appirator_contact_us">お問い合わせ</string>
+    <string name="appirator_button_enjoy_no">いいえ</string>
+    <string name="appirator_button_enjoy_yes">はい</string>
+    <string name="appirator_rate_title">%sの評価</string>
     <string name="appirator_message">楽しんでいただけたならば簡単なご意見をお願いします。%sを評価しますか？</string>
     <string name="appirator_button_rate">%sを評価する</string>
     <string name="appirator_button_rate_later">後で見る</string>

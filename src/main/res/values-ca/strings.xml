@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appirator_app_title">Valorar %s</string>
-    <string name="appirator_rate_title">Rate %s</string>
+    <string name="appirator_feedback_email_title">Comentaris</string>
+    <string name="appirator_contact_us">Contacta amb nosaltres</string>
+    <string name="appirator_button_enjoy_no">No</string>
+    <string name="appirator_button_enjoy_yes">Sí</string>
+    <string name="appirator_rate_title">Valorar %s</string>
     <string name="appirator_message">Si li agrada utilitzar %s, li importaria prendre’s un moment per a valorar-lo? No trigarà més d’un minut. Gràcies por la seva col·laboració!</string>
     <string name="appirator_button_rate">Valorar %s</string>
     <string name="appirator_button_rate_later">Recordar-m’ho més tard</string>
